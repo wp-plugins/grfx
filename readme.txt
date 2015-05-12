@@ -1,4 +1,4 @@
-=== grfx - Stock Image Selling Woocommerce Extension ===
+=== WooCommerce Stock Images by grfx ===
 Contributors: grfx
 Tags: stock images, image, sell, illustration, photography, illustrator, photographer, portfolio, woocommerce, multisite, grfx
 Requires at least: 4.2.0
