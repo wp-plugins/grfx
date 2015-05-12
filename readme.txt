@@ -3,7 +3,7 @@ Contributors: grfx
 Tags: stock images, image, sell, illustration, photography, illustrator, photographer, portfolio, woocommerce, multisite, grfx
 Requires at least: 4.2.0
 Tested up to: 4.2.2
-Stable tag: 1.1.58
+Stable tag: 1.1.68
 License: gpl
 License URI: http://www.gnu.org/licenses/#GPL
 
