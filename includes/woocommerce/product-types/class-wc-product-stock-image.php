@@ -710,7 +710,7 @@ function grfx_info_modal($option, $product){
 
 	$license_text   = get_option('grfx_license_text_'.$option, __('License Text', 'grfx'));
 	
-	$license_title  = get_option('grfx_license_name_'.$product['data']->$option_license, __('License One', 'grfx'));
+	$license_title  = get_option('grfx_license_name_'.$option, __('License One', 'grfx'));
 
 	
 	?>
