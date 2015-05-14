@@ -330,7 +330,8 @@ class grfx_Admin {
 			<p><?php _e( '<strong>grfx</strong> Warning: Imagemagick is not installed or enabled. Images delivered to your customers, as well as preview images, will lack professional quality, especially where advanced color models were used in device or image editing software. This must be corrected.', 'grfx' ); ?></p>
 			<p><?php _e('In your <strong>php.ini</strong> file (root directory of your site) simply inserting <strong>extension=imagick.so</strong> at the end of the file may be enough, depending on your host.', 'grfx') ?></p>
 			<p><a title="<?php _e('See more here.', 'ss') ?>" href="http://php.net/manual/en/imagick.setup.php"><?php _e('Install imagick for PHP', 'ss') ?></a></p>
-		</div>
+            <?php echo grfx_encourage_fix(); ?>
+        </div>
 		<?php
 	}
     
@@ -352,6 +353,7 @@ class grfx_Admin {
 			<p><?php _e( '<strong>grfx</strong> Warning: The <strong>shell_exec()</strong> function has been disabled by your host. Please request them to enable it.', 'grfx' ); ?></p>
 			<p><?php _e('<strong>grfx</strong> uses <strong>shell_exec()</strong> function to employ the advanced meta-data reading functions for uploaded images. This is not an essential function and you can do without it, but it helps.', 'grfx') ?></p>		
             <strong><a class="welcome-panel-close" href="<?php echo admin_url('options-general.php?page=grfx&shell_nag=0') ?>"><?php _e('Dismiss this notice.', 'grfx') ?></a></strong><br />   
+            <?php echo grfx_encourage_fix(); ?>
         </div>
 		<?php
 	}
