@@ -441,6 +441,31 @@ class grfx_Admin {
 	}
         
     /**
+     * Checks to see if database credentials have changed based on a specific 
+     * database credentials string
+     * 
+     * @param type $credentials
+     * @return boolean
+     */
+    public function database_credentials_changed($credentials){
+        
+        $hash_file = grfx_core_plugin.'admin/includes/uploader/plupload/.hash'; 
+        
+        if(!file_exists($hash_file)){
+            return true;
+        } else {
+            $hash = file_get_contents($hash_file);
+            
+            if(md5($credentials) == $hash){
+                return false;
+            } else {
+                return true;
+            }
+        }
+        
+    }
+    
+    /**
      * Sets up uploader configurations and variables to give access to database.
      * Config file is encrypted so that it cannot be accessed by other parties. 
      * Its a dot file as well to avoid direct viewing (as though encryption were 
@@ -452,6 +477,8 @@ class grfx_Admin {
         
         $config_file = grfx_core_plugin.'admin/includes/uploader/plupload/.config';
         $pass_file = grfx_core_plugin.'admin/includes/uploader/plupload/.check';  
+        $hash_file = grfx_core_plugin.'admin/includes/uploader/plupload/.hash';    
+        
         
         $sitepass = grfx_get_sitepass();
         $cf = "DB_HOST='".DB_HOST."';\n";
@@ -459,30 +486,32 @@ class grfx_Admin {
         $cf .= "DB_PASSWORD='".DB_PASSWORD."';\n";
         $cf .= "DB_NAME='".DB_NAME."';\n";
 
-        $crypt = new grfx_Encryption($sitepass);
+        $credentials_changed = $this->database_credentials_changed($cf);
         
-        $encrypted_string = $crypt->encrypt($cf);        
-        
-        if(file_exists($config_file)){
+        if($credentials_changed){     
             
-            $string = file_get_contents($config_file);
+            file_put_contents($hash_file, md5($cf));
             
-            if($string != $encrypted_string){
-                grfx_write_file($config_file, $encrypted_string); 
-                grfx_write_file($pass_file, $sitepass);
-            }
-            
-        } else {            
-            grfx_write_file($config_file, $encrypted_string);  
-            grfx_write_file($pass_file, $sitepass);
-        }         
+            $crypt = new grfx_Encryption($sitepass);
+                        
+            $encrypted_string = $crypt->encrypt($cf);        
 
-        //$decrypt = new grfx_Encryption($sitepass);
-        //$ini = $decrypt->get_ini_file($config_file);
-        //var_dump($ini);
-        //die();
+            if(file_exists($config_file)){
+
+                $string = file_get_contents($config_file);
+
+                if($string != $encrypted_string){
+                    grfx_write_file($config_file, $encrypted_string); 
+                    grfx_write_file($pass_file, $sitepass);
+                }
+
+            } else {            
+                grfx_write_file($config_file, $encrypted_string);  
+                grfx_write_file($pass_file, $sitepass);
+            }         
+        }
+ 
     }
-    
     /*
      * AGENCY FTP FUNCTIONS
      */
