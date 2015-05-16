@@ -51,7 +51,7 @@
         <!-- STEP 4 -->
         
         <li>
-            <hr />
+            <br />
             <p>
             <?php
             _e('Need help? Join the community at <strong><a href="http://community.grfx.co/">community.grfx.co/</a></strong>. We want your image-selling
@@ -61,5 +61,6 @@
         </li>
         
 	</ol>
-	
+	    
 </div>
+
