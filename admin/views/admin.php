@@ -50,8 +50,7 @@
         
         <!-- STEP 4 -->
         
-        <li>
-            <br />
+        <li>            
             <p>
             <?php
             _e('Need help? Join the community at <strong><a href="http://community.grfx.co/">community.grfx.co/</a></strong>. We want your image-selling
