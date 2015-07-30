@@ -460,7 +460,7 @@ class grfx_Image_Processor {
         $command .= $file_name;
 
         $results = shell_exec($command);
-		
+	file_put_contents('test.txt', $results);	
         if ($results && is_string($results)) {
             $meta_object = json_decode($results, false);
             $this->metadata = $meta_object[0];

@@ -255,7 +255,7 @@ function grfx_use_shell_exec() {
     
     if (!defined('grfx_use_shell_exec'))
         define('grfx_use_shell_exec', $has_shell_exec);  
-    
+
     return $has_shell_exec;
     
 }
