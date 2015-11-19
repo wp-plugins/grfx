@@ -2,42 +2,42 @@
 Contributors: grfx
 Tags: wooCommerce stock images, stock photos, image library, stock photography, shop, watermark, image seo, photo gallery, image, sell photos, graphic design, album, stock images, photo, pictures, gallery, sell stockphotos, online art, photographer, multisite, image-store, clipart, image gallery, picture, sell, online store, album, digital images, vectors, royalty free, illustrations, graphics, media, store, ecommerce, photoblog, photos, seo, graphicart, artstore, digital downloads, illustrator, stockphotos, photogallery, shopping, photography store, sell photographs, e-commerce, royalty free images, watermarking, sell pictures, portfolio, thumbnails, macrostock, grfx, photography, image hosting, artist, photo management, digital art, woocommerce, art, selling, image album, image processing
 Requires at least: 4.2.0
-Tested up to: 4.2.2
+Tested up to: 4.4.4
 Stable tag: 1.1.68
 License: gpl
 License URI: http://www.gnu.org/licenses/#GPL
 
 Extends Woocommerce to allow you to mass-upload and sell stock images. Sell your images professionally and easily.
 
+
 == Description ==
-Extends woocommerce to allow you to mass-upload and sell stock images. Sell multiple image sizes, licenses, file types, useful for any image market but optimized for illustrators. From **grfx**, the illustrator network ( http://grfx.co/ )
+Extends woocommerce to allow you to mass-upload and sell stock images. Sell multiple image sizes, licenses, file types, useful for any image market but optimized for illustrators. From **grfx**, the illustrator network ( https://www.facebook.com/grfx.co )
 
 Reads meta-data from images, streamlining your upload/description process. Huge productivity advantage - no tedious editing.
 
-Good community support, **strong SEO**.
+Good community support, **strong SEO**. Created for multisite and personal sites.
 
+- **Run a network, or go solo:** Run your own bustling image selling network or sell off of your own site. Utilize WPMU to run an agency/network via grfx (https://premium.wpmudev.org/)
 - **Compatible with Woocommerce and Woocommerce themes:** Enjoy the benefits, security, and extensibility of a Woocommerce based store that sells stock images.
 - **FTP Support:** Bypass the uploader and easily FTP your images.
-- **Beautifully watermarks your images:** Protect your images with a professional looking watermark - automatically provided or of your creation.
+- **Automatically watermarks your images:** Protect your images with a professional looking watermark - automatically provided or of your creation.
 - **Automated image processing:** - Set it and forget it. Process thousands of images at once.
 - **Set your own licenses:** Easily set End User License Agreements (EULA) for your images.
 - **Processes image Metadata:** Extracts title, keywords, and description from your image files and applies them to your products, saving you time.
-- **Illustrator network:** Join our illustrator network.
-- **Support forums and community:**  http://community.grfx.co/
 - **Tested and stable**: We've been doing this a long time, and this package is well-tested and stable.
 
 **More details...**
 
 Available on Github: https://github.com/orangeman555/grfx
 
-grfx (graphics) - the Illustrator's Stock Image Authoring Tool ( http://www.grfx.co/ )
+grfx (graphics) - the Illustrator's Stock Image Authoring Tool ( https://www.facebook.com/grfx.co/ )
 
 - **grfx** is a specialized open source tool for illustrators and graphic artists to independently publish stock images.
 - **grfx** empowers you to sell the following: **Images, vectors, photoshop files, zip files, and more.**
 - **grfx** supports multiple licenses to sell your files under.
 - **grfx** is a woocommerce extension. Get Woocommerce here: https://wordpress.org/plugins/woocommerce/
 - **grfx** will automatically take your image uploads and process them straight into ready-made woocommerce stock image products -- it's just like running your own personal stock image agency!
-- **grfx** is the first open source software spearheading the "indie-stock" movement. http://community.grfx.co/the-grfx-invention-of-indie-stock/
+- **grfx** is the first open source software spearheading the "indie-stock" movement. https://www.facebook.com/grfx.co/the-grfx-invention-of-indie-stock/
 - **grfx** can be used with any woocommerce compatible wordpress theme. Get one of those beautiful woocommerce-based themes and really wow your customers with your beautiful site and stock images for sale!
 
 Are you an illustrator or graphic artist? Have you ever heard of stock imaging? See more here: http://en.wikipedia.org/wiki/Stock_image

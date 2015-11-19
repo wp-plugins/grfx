@@ -5,7 +5,7 @@
  * @package   grfx
  * @author    Leo Blanchette <clipartillustration.com@gmail.com>
  * @license   GPL-2.0+
- * @link      http://www.grfx.com
+ * @link      https://www.facebook.com/grfx.co
  * @copyright 2014 Leo Blanchette
  */
 
@@ -83,11 +83,12 @@ class grfx {
 
 		$installed = get_option('grfx_installed_installed', false);
 		
+                $this->activate_exiftool();
+                
 		if(!$installed){
 			$this->file_system_setup();
 			$this->install_db();
 			grfx_set_sitepass();
-			$this->activate_exiftool();
                         $this->set_defaults();
 		}
         
@@ -330,8 +331,12 @@ class grfx {
 
     
 	public function activate_exiftool(){
-        if(grfx_use_shell_exec())
-            shell_exec('chmod a+x '.grfx_core_plugin . 'admin/includes/exiftool/exiftool');
+         
+        if(grfx_use_shell_exec()){
+            if(!is_executable(grfx_core_plugin . 'admin/includes/exiftool/exiftool'))
+                chmod(grfx_core_plugin . 'admin/includes/exiftool/exiftool', 0755);
+                
+            }
 	}
 	
 	public function install_db(){

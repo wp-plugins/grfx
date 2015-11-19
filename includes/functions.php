@@ -20,10 +20,10 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  * 
  * @subpackage grfx_Functions
- * @author     Leo Blanchette <leo@grfx.com>
+ * @author     Leo Blanchette <leo@grfx.co>
  * @copyright  2012-2015 grfx
  * @license    http://www.gnu.org/licenses/gpl.html
- * @link       http://www.grfx.com
+ * @link       https://www.facebook.com/grfx.co
  */
   
 
@@ -404,12 +404,20 @@ function grfx_plugin_info(){
 		$image_system = __('(Using GD Library)', 'grfx');
 	}
 	
+        if(grfx_use_shell_exec()){
+            $shell_exec = '<br />' . __('Shell exec functions allowed by host (enables metadata-extraction from images)', 'grfx');            
+        } else {
+            $shell_exec = '<br />' . __('Shell exec functions not allowed by host (enables metadata-extraction from images). You should enable this.', 'grfx');            
+        }
+        
 	$summary = '';
 	$summary .= __('grfx ');
 	$summary .= ' '.grfx_version;
 	$summary .= ' '.$image_system;
+        $summary .= ' '.$shell_exec;
 	$summary .= '';
 	
+        
 	return $summary;
 }
 
